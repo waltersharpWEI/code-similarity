@@ -84,11 +84,6 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.zhixiangli</groupId>
-			<artifactId>code-similarity</artifactId>
-			<version>0.0.2</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -201,7 +196,6 @@
 				</plugins>
 			</build>
 		</profile>
-		
 	</profiles>
 
 </project>
