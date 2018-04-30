@@ -26,13 +26,18 @@ import fundation.BussinessLogic;
 **define the path of the new funcion p1 and path of the functions libraray**
 
 String p1 = "/Users/weilai/cscode/ax.csharp";
+
 String p2 = "/Users/weilai/cscode/testDir";
 
 **Call the findFuncInLib function and convey threshhold and path into it**
 
 try {
+
     System.out.println(BussinessLogic.findFuncInLib(p1, p2, 0.6));
+
 } catch (IOException e) {
+
     System.out.println("File or Dir Error");
+
 }
 
