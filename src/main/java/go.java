@@ -10,14 +10,14 @@ public class go {
 		// TODO Auto-generated method stub
 		String a = "abc";
 		String b = "abc";
-		String p1 = "/Users/weilai/cscode/ax.csharp";
-		String p2 = "/Users/weilai/cscode/testDir";
+		String p1 = "/Users/weilai/cscode/WMACrossover.cs";
+		String p2 = "/Users/weilai/cscode/exampleDir";
 
 		//System.out.println(BussinessLogic.isTheSame(a, b, 0.2));
 		//System.out.println(BussinessLogic.isTheSameFS(p1, p2, 0.6));
 		
 		try {
-			System.out.println(BussinessLogic.findFuncInLib(p1, p2, 0.6));
+			System.out.println(BussinessLogic.findFuncInLib(p1, p2, 0.9));
 		} catch (IOException e) {
 			System.out.println("File or Dir Error");
 		}
