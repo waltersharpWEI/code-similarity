@@ -2,6 +2,7 @@ package fundation;
 
 import com.zhixiangli.code.similarity.CodeSimilarity;
 import com.zhixiangli.code.similarity.strategy.CosineSimilarity;
+import com.zhixiangli.code.similarity.strategy.AdvancedSimilarity1;
 import java.io.*;
 
 public class BussinessLogic {
@@ -23,6 +24,20 @@ public class BussinessLogic {
 		CodeSimilarity cosineSimilarity = new CodeSimilarity(new CosineSimilarity());
 		double sim2 = cosineSimilarity.get(str1, str2);
 		return (sim1 + sim2) / 2.0 > threshold;
+	}
+	
+	public static boolean isTheSameFSAdvanced(String path1, String path2, double threshold) {
+		String str1 = readFromFile(path1);
+		String str2 = readFromFile(path2);
+			
+		CodeSimilarity codeSimilarity = new CodeSimilarity();
+		double sim1 = codeSimilarity.get(str1, str1);
+		CodeSimilarity cosineSimilarity = new CodeSimilarity(new CosineSimilarity());
+		double sim2 = cosineSimilarity.get(str1, str2);
+		CodeSimilarity advancedSimilarity = new CodeSimilarity(new AdvancedSimilarity1());
+		double sim3 = advancedSimilarity.get(str1, str2);
+		
+		return (sim1 * 0.2 + sim2 * 0.5 + sim3 * 0.3)  > threshold;
 	}
 	
 	public static String readFromFile(String path) {
